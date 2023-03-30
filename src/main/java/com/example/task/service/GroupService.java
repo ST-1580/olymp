@@ -64,7 +64,7 @@ public class GroupService implements GroupController {
     }
 
     @Override
-    public void updateGroup(long groupId) {
+    public void deleteGroup(long groupId) {
         Optional<Group> group = groupRepository.findById(groupId);
         if (group.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Group with id " + groupId + " does not exist");
